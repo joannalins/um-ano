@@ -180,37 +180,11 @@ overflow-y: auto;
     text-align: center;
     line-height: 1.6;
 }
-.selo{
-    width: 42px;
-    height: 42px;
 
-    background: #F8F3EC;
-
-    border: 2px solid #E3D3C1;
-    border-radius: 50%;
-
-    position: absolute;
-    top: 88px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 18px;
-    color: #C68C8C;
-
-    z-index: 11;
-
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
-}
 .envelope.sumir .aba,
 .envelope.sumir .frente,
 .envelope.sumir .dobra-esquerda,
-.envelope.sumir .dobra-direita,
-.envelope.sumir .selo{
+.envelope.sumir .dobra-direita{
     opacity: 0;
     transition: opacity .8s ease;
 }
