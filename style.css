@@ -265,3 +265,18 @@ overflow-y: auto;
 
     font-size: 20px;
 }
+.botao-carta{
+    margin-top: 30px;
+
+    text-decoration: none;
+
+    background: #E8C9A7;
+
+    color: #6B4E3D;
+
+    padding: 12px 20px;
+
+    border-radius: 20px;
+
+    font-family: 'Quicksand', sans-serif;
+}
