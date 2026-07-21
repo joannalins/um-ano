@@ -231,7 +231,7 @@ overflow-y: auto;
     width: 90vw;
     height: 90vh;
 
-    transform: none;
+    transform: translate(0,0);
 
     padding: 35px;
 
