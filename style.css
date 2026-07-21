@@ -1,1 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+overflow-y: auto;
+
+    background: linear-gradient(180deg, #FFF8F2 0%, #FFF3EA 100%);
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.envelope{
+    width: 320px;
+    height: 220px;
+
+    background: #F6EBDD;
+
+    border-radius: 12px;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    overflow: hidden;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+
+    cursor: pointer;
+
+    transition: transform .3s ease;
+
+    animation: flutuar 3s ease-in-out infinite;
+}
+.envelope:hover{
+    transform: translate(-50%, -50%) scale(1.03);
+}
+.aba{
+    width: 0;
+    height: 0;
+
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-top: 110px solid #ECDCCB;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+
+    transform-origin: top;
+    transition: transform .6s ease;
+}
+
+.dobra-esquerda{
+    width: 0;
+    height: 0;
+
+    border-top: 110px solid transparent;
+    border-bottom: 110px solid transparent;
+     border-right: 160px solid #F6EBDD;
+     position: absolute;
+    right: 0;
+    bottom: 0;
+
+    z-index: 2;
+}
+
+
+.dobra-direita{
+    width: 0;
+    height: 0;
+
+    border-top: 110px solid transparent;
+    border-bottom: 110px solid transparent;
+     border-left: 160px solid #F6EBDD;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    z-index: 2;
+}
+
+
+.frente{
+    width: 320px;
+    height: 110px;
+
+    background: #F6EBDD;
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    z-index: 9;
+
+    border-radius: 0 0 12px 12px;
+}
+.carta{
+    width: 260px;
+    height: 160px;
+
+    background: linear-gradient(180deg, #FFFBF5 0%, #F7F0E6 100%);
+
+    position: absolute;
+
+    left: 30px;
+    bottom: -140px; /* escondida dentro do envelope */
+
+    border-radius: 8px;
+
+    z-index: 1;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+
+    transition: all 1s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+}
+.envelope.aberto .aba{
+    transform: rotateX(180deg);
+}
+
+.envelope.subir .carta{
+    transform: translateY(-120px);
+    z-index: 11;
+}
+@keyframes flutuar{
+
+    0%{
+        transform: translate(-50%, -50%);
+    }
+
+    50%{
+        transform: translate(-50%, calc(-50% - 6px));
+    }
+
+    100%{
+        transform: translate(-50%, -50%);
+    }
+
+}
+.carta p:first-child{
+    font-family: 'Forum', serif;
+    font-size: 34px;
+    color: #6B4E3D;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.carta p:last-child{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    color: #8C6A4D;
+
+    text-align: center;
+    line-height: 1.6;
+}
+.selo{
+    width: 42px;
+    height: 42px;
+
+    background: #F8F3EC;
+
+    border: 2px solid #E3D3C1;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 88px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    color: #C68C8C;
+
+    z-index: 11;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+.envelope.sumir .aba,
+.envelope.sumir .frente,
+.envelope.sumir .dobra-esquerda,
+.envelope.sumir .dobra-direita,
+.envelope.sumir .selo{
+    opacity: 0;
+    transition: opacity .8s ease;
+}
+
+.envelope.sumir{
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    pointer-events: none;
+}
+.envelope.sumir .carta {
+
+    position: fixed;
+
+    top: 5vh;
+    left: 5vw;
+
+    width: 90vw;
+    height: 90vh;
+
+    transform: none;
+
+    padding: 35px;
+
+    border-radius: 14px;
+
+    overflow-y: auto;
+
+    z-index: 999;
+}
+.poema{
+    font-family: 'Forum', serif;
+    font-size: 14px;
+    color: #6B4E3D;
+
+    line-height: 1.8;
+    letter-spacing: .4px;
+
+    text-align: left;
+}
+
+.hora{
+    color: #B7865E;
+    font-weight: 600;
+}
+
+.assinatura{
+    display: block;
+    margin-top: 35px;
+
+    text-align: right;
+
+    font-size: 20px;
+}
