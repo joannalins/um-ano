@@ -280,3 +280,43 @@ overflow-y: auto;
 
     font-family: 'Quicksand', sans-serif;
 }
+.pagina-carta{
+
+    min-height: 100vh;
+
+    padding: 25px 15px;
+
+    background: linear-gradient(180deg, #FFF8F2 0%, #FFF3EA 100%);
+
+}
+
+
+.carta-completa{
+
+    width: 100%;
+    max-width: 450px;
+
+    margin: 20px auto;
+
+    background: #FFFBF5;
+
+    padding: 45px 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+
+}
+
+
+.carta-completa .poema{
+
+    font-family: 'Forum', serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #6B4E3D;
+
+}
