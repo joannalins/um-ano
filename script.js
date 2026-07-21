@@ -9,7 +9,7 @@ function abrirEnvelope() {
     }, 2000);
 
     setTimeout(() => {
-        envelope.classList.add("sumir");
-    }, 3200);
+        window.location.href = "carta.html";
+    }, 3500);
 
 }
