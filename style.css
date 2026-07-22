@@ -232,12 +232,18 @@ overflow-y: auto;
 }
 
 .assinatura{
-    display: block;
-    margin-top: 35px;
+
+    font-family: 'Forum', serif;
+
+    font-size: 18px;
+
+    color: #6B4E3D;
 
     text-align: right;
 
-    font-size: 20px;
+    margin-top: 35px;
+
+    line-height: 1.6;
 }
 .botao-carta{
     margin-top: 30px;
